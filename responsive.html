@@ -1,9 +1,9 @@
 <!--
 =========================================================
-Name        : index.html
+Name        : responsive.html
 Assignment  : Lab 4 Exercise B
-Author(s)   : Mahdi Ansari, William Arthur Philip Louis
-Submission  : May 21, 2030
+Author(s)   : Maliha Chowdhury Adrita
+Submission  : Feb 08,2024
 Description : Responsive Layouts.
 =========================================================
 -->
@@ -18,9 +18,10 @@ Description : Responsive Layouts.
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- First, link the menu.css file here -->
-
-	<style>	
-		/* Remove borders at the end, they have been add just for detecting positions of items*/	
+	<link rel="stylesheet" href="menu.css">
+	
+	<style>	/*
+		Remove borders at the end, they have been add just for detecting positions of items
 		div {
 			border: 1px dashed gray;	
 		}
@@ -35,7 +36,7 @@ Description : Responsive Layouts.
 		}
 		.small {
 			border: 1px solid yellow;	
-		}		
+		}*/		
 	</style>
 
     <style>
@@ -48,35 +49,62 @@ Description : Responsive Layouts.
         .news-item { padding: 10px; }
 		
 		.row { 
-			/*I need some CSS codes.*/		
+			/*I need some CSS codes.*/
+			clear: both;
 		}
 
 		.large, .medium, .small {
 			/*I need some CSS codes.*/
+			box-sizing: border-box; 
+        		width: 100%; 
+        		float: none; 
+        		margin-bottom: 20px;
 		}
 		
 		.gap {
 			/*I need some CSS codes.*/
+			height: 50px;
+			clear: both;
 		}
 
 		@media screen and (min-width: 769px) {			
 			.large { 
 				/*I need some CSS codes.*/
+				width: 100%;
 			}
 			.medium { 
 				/*I need some CSS codes.*/
+				width: 70%;
+				float: right;
 			}
 			.small { 
 				/*I need some CSS codes.*/
+				width: 30%;
+				float: left;
 			 }
 		}
 
         @media screen and (max-width: 768px) {
-            /*I need some CSS codes.*/
+		/*I need some CSS codes.*/
+		.main { padding: 10px; margin-left: 0;}
+		.large { width: 100%; }
+		.medium { width: 60%; float: right;	}
+		.small { width: 40%; float: left; }
+		.menu {	width: 100%; float: none; }
+    		.menu ul li { display: inline-block; float: none; margin-right: 10px; }
+    		.menu ul li a { padding: 10px; }
         }
 
         @media screen and (max-width: 480px) {
-			/*I need some CSS codes.*/
+		/*I need some CSS codes.*/
+		.main { padding: 10px; margin-left: 0;}
+		.large{ width: 100%; float: none;}
+		.medium{ width: 100%; float: none;}
+		.small{ width: 100%; float: none;}
+		.header h1 { font-size: 18px; }
+		.menu {	width: 100%; float: none; }
+    		.menu ul li { display: inline-block; float: none; margin-right: 10px; }
+    		.menu ul li a { padding: 10px; }
         }
 
         
